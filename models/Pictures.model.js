@@ -6,7 +6,7 @@ const picturesSchema = new Schema({
   source: {
         type: String,
         enum: ["DALL.E 2", "DeepAI"]
-            }
+            },
   prompt: {
     type: String,
     enum: ["man", "gay man", "woman", "lesbian", "masculinity", "femininity", "trans man", "trans woman"]
