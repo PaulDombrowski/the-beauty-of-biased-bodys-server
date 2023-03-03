@@ -9,12 +9,17 @@ const picturesSchema = new Schema({
             },
   prompt: {
     type: String,
-    enum: ["man", "gay man", "woman", "lesbian", "masculinity", "femininity", "trans man", "trans woman"]
+    enum: ["man", "gay man", "woman", "lesbian", "masculinity", "femininity", "trans man", "trans woman", "pupil", "couple"]
+  },
+  comments: {
+    type: [Schema.Types.ObjectId],
+    ref: "Comment"
   }
 },
 {
   timestamps: true
 })
+
 
 const Pictures = model("Pictures", picturesSchema);
 

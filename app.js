@@ -8,6 +8,7 @@ const { isAuthenticated } = require("./middleware/jwt.middleware");
 const app = express();
 require("./config")(app);
 
+
 const picturesRoutes = require("./routes/pictures.routes")
 app.use("/api", picturesRoutes)
 
