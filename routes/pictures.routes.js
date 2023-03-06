@@ -47,5 +47,25 @@ router.get("/pictures/:id", (req, res, next) => {
 });
 
 
+// delete by id// 
+
+
+router.delete("/deletepicture/:id", (req, res, next) => {
+  const id = req.params.id;
+
+  Pictures.findByIdAndDelete(id)
+    .then((deletedPicture) => {
+      if (!deletedPicture) {
+        res.status(404).json({ message: "Picture not found" });
+      } else {
+        res.status(200).json({ message: "Picture deleted" });
+      }
+    })
+    .catch((err) => next(err));
+});
+
+
+
+
 
 module.exports = router;

@@ -9,7 +9,7 @@ const picturesSchema = new Schema({
             },
   prompt: {
     type: String,
-    enum: ["man", "gay man", "woman", "lesbian", "masculinity", "femininity", "trans man", "trans woman", "pupil", "couple"]
+    enum: ["man", "gay man", "woman", "lesbian", "masculinity", "femininity", "trans man", "trans woman", "pupil", "couple", "straight woman", "straight man"]
   },
   comments: {
     type: [Schema.Types.ObjectId],
