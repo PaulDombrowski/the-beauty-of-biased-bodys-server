@@ -29,7 +29,6 @@ router.get("/allPictures", (req, res, next) => {
     Pictures.find()
     .then((response) => {
         res.status(201).json(response)
-        console.log(response)
     })
     .catch((err) => console.log(err))
 })
@@ -63,8 +62,6 @@ router.delete("/deletepicture/:id", (req, res, next) => {
     })
     .catch((err) => next(err));
 });
-
-
 
 
 
